@@ -1,0 +1,142 @@
+:host {
+    display: contents;
+}
+
+.container-description {
+    width: 60%;
+    height: 100%;
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 1rem;
+    position: relative;
+    padding: 0 1.5rem;
+}
+
+.container-description h1 {
+    font-family: var(--font-family-cleanow);
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-weight: bold;
+    text-transform: capitalize;
+    line-height: 1.2;
+}
+
+.container-description h3 {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.container-description p {
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    width: 80%;
+    height: 6.5rem;
+    line-height: 1.2;
+}
+
+.container-description .contaner-buttons {
+    width: 50%;
+    height: 5rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 2rem;
+}
+
+.container-description .contaner-buttons button {
+    outline: none;
+    border: none;
+    width: 15rem;
+    height: 3rem;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    border: 2px solid var(--secondary-color);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+.container-description .contaner-buttons button:hover {
+    background-color: transparent;
+    color: var(--secondary-color);
+}
+
+.container-description .contaner-buttons a {
+    outline: none;
+    border: none;
+    width: 15rem;
+    height: 3rem;
+    background-color: transparent;
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+    font-family: var(--font-family-caviar-dreams);
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-description .contaner-buttons a:hover {
+    background-color: var(--secondary-color);
+    color: var(--black-color);
+}
+
+.container-social {
+    display: flex;
+    gap: 1rem;
+    position: absolute;
+    bottom: 3%;
+    left: 3%;
+}
+
+.container-social .container-img-social {
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    border-radius: 100%;
+    border: 2px solid var(--text-color);
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-social .container-img-social:hover {
+    background-color: var(--text-color);
+}
+
+.container-social .container-img-social img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container-social .container-img-social:hover img {
+    
+}
+
+.container-social .container-img-social:nth-child(1) img {
+    width: 70%;
+    height: auto;
+    object-fit: cover;
+}
+
+.container-img {
+    background-color: transparent;
+    width: 40%;
+    height: 100%;
+    position: relative;
+    clip-path: circle(43%);
+}
+
+.container-img img {
+    width: 100%;
+    height: 99.6%;
+    object-fit: cover;
+}

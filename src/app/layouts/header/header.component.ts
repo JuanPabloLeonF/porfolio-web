@@ -1,10 +1,12 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, inject, OnInit } from '@angular/core';
 import { applyTheme, getSystemLocalStorage, TypeTheme, TypeThemeInit } from '../../../utils/utilsmodstheme';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { NavigationEnd, Router, RouterLink, RouterLinkActive } from '@angular/router';
+import { filter } from 'rxjs';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-header',
-  imports: [RouterLink, RouterLinkActive],
+  imports: [RouterLink, RouterLinkActive, NgClass],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
@@ -12,11 +14,18 @@ export class HeaderComponent implements OnInit{
 
   protected typeMod!: string;
   protected activateMenuThemeValue: boolean = false;
+  protected activateMenuBurguerValue: boolean = false;
   protected typeTheme: TypeTheme = TypeThemeInit;
+  private router: Router = inject(Router);
 
   ngOnInit(): void {
     this.typeMod = getSystemLocalStorage();
     this.activateMenuTheme(false);
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe((event: NavigationEnd) => {
+      this.activateMenuBurguer(false)
+    });
   }
 
   protected changeTypeTheme(value: string, event: Event): void {
@@ -35,10 +44,15 @@ export class HeaderComponent implements OnInit{
     }
 
     this.activateMenuThemeValue = false;
+    this.activateMenuBurguerValue = false;
   }
 
   protected activateMenuTheme(value: boolean): void {
     this.activateMenuThemeValue = value;
+  }
+
+  protected activateMenuBurguer(value: boolean): void {
+    this.activateMenuBurguerValue = value;
   }
 
   @HostListener('document:click', ['$event'])
@@ -46,6 +60,10 @@ export class HeaderComponent implements OnInit{
     const targetElement = event.target as HTMLElement;
     if (!targetElement.closest('.container-mod-theme')) {
       this.activateMenuThemeValue = false;
+    }
+
+    if (!targetElement.closest('.nav-responsive') && !targetElement.closest('.container-img-menu')) {
+      this.activateMenuBurguerValue = false;
     }
   }
 

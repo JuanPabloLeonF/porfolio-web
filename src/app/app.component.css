@@ -1,7 +1,10 @@
 main {
     width: 100%;
-    height: calc(100% - var(--header-height));
-    background-color: yellow;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    align-items: center;
 }
 
 @keyframes openDoorTop {
@@ -24,7 +27,7 @@ main {
 }
 
 .estructure-1 {
-    background-color: var(--secondary-color);
+    background-color: var(--structure-color-1);
     width: 100vw;
     height: 100vh;
     position: absolute;
@@ -36,7 +39,7 @@ main {
 }
 
 .estructure-2 {
-    background-color: var(--primary-color);
+    background-color: var(--structure-color-2);
     width: 100vw;
     height: 100vh;
     position: absolute;

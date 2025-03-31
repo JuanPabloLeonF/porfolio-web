@@ -11,16 +11,14 @@
             [class.theme-dark]="typeMod === typeTheme.dark"
             [src]="typeMod === typeTheme.dark ? '/images/sun.svg' : '/images/moon.svg'"
             alt="Cambiar tema">
-            @if (activateMenuThemeValue) {
-                <div class="container-themes">
-                    <p (click)="changeTypeTheme(typeTheme.light, $event)">Claro</p>
-                    <p (click)="changeTypeTheme(typeTheme.dark, $event)">Oscuro</p>
-                    <p (click)="changeTypeTheme(typeTheme.reset, $event)">Sistema</p>
-                </div>
-            }
+            <div class="container-themes" [ngClass]="{activate: activateMenuThemeValue}">
+                <p (click)="changeTypeTheme(typeTheme.light, $event)">Claro</p>
+                <p (click)="changeTypeTheme(typeTheme.dark, $event)">Oscuro</p>
+                <p (click)="changeTypeTheme(typeTheme.reset, $event)">Sistema</p>
+            </div>
         </div>
     </nav>
-    <nav class="nav-responsive">
+    <nav class="nav-responsive" [ngClass]="{activate: activateMenuBurguerValue}">
         <a routerLink="/init" routerLinkActive="active" rel="noopener noreferrer">Inicio</a>
         <a routerLink="/about" routerLinkActive="active" rel="noopener noreferrer">Sobre Mí</a>
         <a routerLink="/projects" routerLinkActive="active" rel="noopener noreferrer">Proyectos</a>
@@ -31,13 +29,18 @@
             [class.theme-dark]="typeMod === typeTheme.dark"
             [src]="typeMod === typeTheme.dark ? '/images/sun.svg' : '/images/moon.svg'"
             alt="Cambiar tema">
-            @if (activateMenuThemeValue) {
-                <div class="container-themes">
-                    <p (click)="changeTypeTheme(typeTheme.light, $event)">Claro</p>
-                    <p (click)="changeTypeTheme(typeTheme.dark, $event)">Oscuro</p>
-                    <p (click)="changeTypeTheme(typeTheme.reset, $event)">Sistema</p>
-                </div>
-            }
+            <div class="container-themes" [ngClass]="{activate: activateMenuThemeValue}">
+                <p (click)="changeTypeTheme(typeTheme.light, $event)">Claro</p>
+                <p (click)="changeTypeTheme(typeTheme.dark, $event)">Oscuro</p>
+                <p (click)="changeTypeTheme(typeTheme.reset, $event)">Sistema</p>
+            </div>
         </div>
     </nav>
+    <div (click)="activateMenuBurguer(true)" class="container-img-menu">
+        <img 
+        [class.theme-light]="typeMod === typeTheme.light" 
+        [class.theme-dark]="typeMod === typeTheme.dark"
+        src="/images/menu.svg" 
+        alt="Menu">
+    </div>
 </header>
