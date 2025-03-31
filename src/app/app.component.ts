@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './layouts/header/header.component';
-import { applyTheme, getSystemTheme } from '../utils/utilsmodstheme';
+import { applyTheme, getSystemLocalStorage, getSystemTheme } from '../utils/utilsmodstheme';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +13,6 @@ export class AppComponent {
   title = 'porfolio-web';
 
   constructor() {
-    applyTheme(getSystemTheme());
+    applyTheme(getSystemLocalStorage() || getSystemTheme());
   }
 }

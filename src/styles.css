@@ -17,11 +17,15 @@
 :root {
     --font-family-cleanow: "Cleanow";
     --font-family-caviar-dreams: "CaviarDreams";
+    --max-width: 1280px;
+    --header-height: 3rem;
+}
+
+/* BreakPoints :
     --breakpoint-smartphone: 480px;
     --breakpoint-tablet: 768px;
     --breakpoint-desktop: 1024px;
-    --max-width: 1280px;
-}
+*/    
 
 /* Theme Dark Defaulth */
 :root {
@@ -64,7 +68,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow-x: hidden;
     color: var(--text-color);
     position: relative;
     background-color: var(--primary-color);
