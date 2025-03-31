@@ -1,1 +1,90 @@
-/* You can add global styles to this file, and also import other style files */
+/* import fonts */
+@font-face {
+    font-family: "Cleanow";
+    src: url("/fonts/Cleanow.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "CaviarDreams";
+    src: url("/fonts/CaviarDreams.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Custom propierties Theme Dark Defaulth */
+:root {
+    --font-family-cleanow: "Cleanow";
+    --font-family-caviar-dreams: "CaviarDreams";
+    --breakpoint-smartphone: 480px;
+    --breakpoint-tablet: 768px;
+    --breakpoint-desktop: 1024px;
+    --max-width: 1280px;
+}
+
+/* Theme Dark Defaulth */
+:root {
+    --primary-color: rgb(4, 32, 48);
+    --secondary-color: rgb(39, 194, 255);
+    --white-color: rgb(255, 255, 255);
+    --black-color: rgb(0, 0, 0);
+    --text-color: rgb(255, 255, 255);
+    --box-shadown-color: rgba(0, 183, 255, 0.116);
+}
+
+/* Theme Light */
+:root.light-mode {
+    --primary-color: rgb(255, 255, 255);
+    --secondary-color: rgb(0, 0, 0);
+    --white-color: rgb(255, 255, 255);
+    --black-color: rgb(0, 0, 0);
+    --text-color: rgb(0, 0, 0);
+    --box-shadown-color: rgba(0, 0, 0, 0.116);
+}
+  
+/* Reset */
+html {
+    box-sizing: border-box;
+    font-family: var(--font-family-caviar-dreams);
+    font-size: 16px;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+  
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+  
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    color: var(--text-color);
+    position: relative;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    max-width: var(--max-width);
+    height: 100vh; 
+    margin: 0 auto;
+}
+  
+a {
+    color: var(--secondary-color);
+    transition: all 0.5s ease-out;
+    text-decoration: none;
+}
+  
+a:hover {
+    opacity: 0.75;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}

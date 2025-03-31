@@ -1,0 +1,23 @@
+<header>
+    <h2 class="logo">JuanPabloLeonF.</h2>
+    <nav>
+        <a href="" rel="noopener noreferrer">Inicio</a>
+        <a href="" rel="noopener noreferrer">Sobre Mí</a>
+        <a href="" rel="noopener noreferrer">Proyectos</a>
+        <a href="" rel="noopener noreferrer">Contacto</a>
+        <div (click)="activateMenuTheme(true)" class="container-mod-theme">
+            <img 
+            [class.theme-light]="typeMod === typeTheme.light"
+            [class.theme-dark]="typeMod === typeTheme.dark"
+            [src]="typeMod === typeTheme.dark ? '/images/sun.svg' : '/images/moon.svg'"
+            alt="Cambiar tema">
+            @if (activateMenuThemeValue) {
+                <div class="container-themes">
+                    <p (click)="changeTypeTheme(typeTheme.light, $event)">Claro</p>
+                    <p (click)="changeTypeTheme(typeTheme.dark, $event)">Oscuro</p>
+                    <p (click)="changeTypeTheme('reset', $event)">Sistema</p>
+                </div>
+            }
+        </div>
+    </nav>
+</header>
