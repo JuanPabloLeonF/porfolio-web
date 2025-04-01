@@ -3,15 +3,16 @@
 }
 
 .container-description {
-    width: 60%;
+    width: 50%;
     height: 100%;
     display : flex;
     flex-direction: column;
     justify-content: center;
     align-items: start;
     gap: 1rem;
-    position: relative;
     padding: 0 1.5rem;
+    background-color: var(--primary-color-alpha);
+    backdrop-filter: blur(10px);
 }
 
 .container-description h1 {
@@ -34,7 +35,7 @@
 }
 
 .container-description .contaner-buttons {
-    width: 50%;
+    width: 100%;
     height: 5rem;
     display: flex;
     justify-content: start;
@@ -45,7 +46,8 @@
 .container-description .contaner-buttons button {
     outline: none;
     border: none;
-    width: 15rem;
+    min-width: 8rem;
+    width: 10rem;
     height: 3rem;
     background-color: var(--secondary-color);
     color: var(--primary-color);
@@ -63,6 +65,7 @@
     background-position: left;
 }
 
+.container-description .contaner-buttons button.activate,
 .container-description .contaner-buttons button:hover {
     background-color: transparent;
     color: var(--secondary-color);
@@ -72,7 +75,8 @@
 .container-description .contaner-buttons a {
     outline: none;
     border: none;
-    width: 15rem;
+    min-width: 8rem;
+    width: 10rem;
     height: 3rem;
     background-color: transparent;
     color: var(--secondary-color);
@@ -86,7 +90,6 @@
     justify-content: center;
     align-items: center;
     transition: all 0.8s ease-in-out;
-
     background: radial-gradient(circle, 
         var(--color-social-primary) 0%, 
         var(--color-social-primary) 100%);
@@ -96,6 +99,7 @@
     background-position: right;
 }
 
+.container-description .contaner-buttons a.activate,
 .container-description .contaner-buttons a:hover {
     color: var(--primary-color);
     background-size: 100% 100%;
@@ -104,9 +108,6 @@
 .container-social {
     display: flex;
     gap: 1rem;
-    position: absolute;
-    bottom: 3%;
-    left: 3%;
 }
 
 .container-social .container-img-social {
@@ -130,17 +131,86 @@
     background-size: 100% 100%;
 }
 
-
-.container-img {
-    background-color: transparent;
-    width: 40%;
+.container-habilities {
+    width: 50%;
     height: 100%;
-    position: relative;
-    clip-path: circle(43%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1.5rem;
+    background-color: black;
 }
 
-.container-img img {
+.container-habilities .container-tecnologies {
     width: 100%;
-    height: 99.6%;
-    object-fit: cover;
+    height: 20rem;
+    background-color: var(--primary-color-pre);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 8px;
+    gap: 1rem;
+    border-left: 4px solid #FFD700;/* color del lenguaje dinamico*/
+}
+
+.container-habilities .container-pre {
+    width: 100%;
+    height: 7rem;
+    background-color: var(--primary-color-pre);
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: "Fira Code", "Courier New", monospace;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    border-left: 4px solid #FFD700;
+    overflow: hidden;
+    position: relative;
+}
+
+.container-habilities .container-pre .container-circles {
+    position: absolute;
+    top: 2%;
+    left: 3%;
+    width: 4rem;
+    height: 2rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.container-habilities .container-pre .circle:nth-child(1) {
+    color: #FF5F57;
+}
+
+.container-habilities .container-pre .circle:nth-child(2) {
+    color: #FFBD2E;
+}
+
+.container-habilities .container-pre  .circle:nth-child(3) {
+    color: #28C940;
+}
+
+
+@media screen and (width < 768px) {
+    .container-description {
+        width: 90%;
+        height: calc(100vh - 5rem);
+        gap: 2rem;
+        justify-content: center;
+    }
+
+    .container-description p {
+        width: 100%;
+        height: 4rem;
+    }
+
+    .container-img {
+        display: none;
+    }
 }

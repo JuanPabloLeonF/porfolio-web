@@ -1,0 +1,9 @@
+div {
+    width: 5rem;
+    height: 5rem;
+    padding: 0.5rem;
+    background-color: transparent;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: box-shadow 0.5s ease;
+}

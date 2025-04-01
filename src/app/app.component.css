@@ -7,6 +7,7 @@ main {
     align-items: center;
 }
 
+
 @keyframes openDoorTop {
     0% {
         clip-path: polygon(100% 0, 0 0, 0 100%);
@@ -47,4 +48,12 @@ main {
     bottom: 0;
     clip-path: polygon(100% 100%, 0% 100%, 100% 0);
     animation: openDoorBottom 1s ease forwards;
+}
+
+@media screen and (width < 768px) {
+    main {
+        flex-direction: column;
+        height: auto;
+        gap: 1rem;
+    }
 }

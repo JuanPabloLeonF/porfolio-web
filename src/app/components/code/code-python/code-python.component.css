@@ -1,0 +1,21 @@
+:host {
+    display: contents;
+}
+
+code {
+    color: rgb(0, 255, 213);
+    font-weight: 500;
+}
+
+code .symbol {
+    color: rgb(231, 255, 94);
+}
+
+code .keyword {
+    color: rgb(204, 94, 255);
+    font-weight: bold;
+}
+
+code .string {
+    color: rgb(176, 255, 102);
+}

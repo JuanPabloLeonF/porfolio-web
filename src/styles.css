@@ -41,11 +41,13 @@
     --strong-color: rgb(39, 194, 255);
     --color-social-primary: rgb(39, 194, 255);
     --color-social-secondary: rgb(255, 255, 255);
+    --primary-color-alpha: rgba(4, 32, 48, 0.356);
+    --primary-color-pre: rgb(4, 32, 48);
 }
 
 /* Theme Light */
 :root.light-mode {
-    --primary-color: rgb(255, 255, 255);
+    --primary-color: rgb(212, 212, 212);
     --secondary-color: rgb(0, 0, 0);
     --white-color: rgb(255, 255, 255);
     --black-color: rgb(0, 0, 0);
@@ -56,6 +58,8 @@
     --structure-color-2: rgb(89, 90, 90);
     --color-social-primary: rgb(0, 0, 0);
     --color-social-secondary: rgb(255, 255, 255);
+    --primary-color-alpha: rgba(212, 212, 212, 0.5);
+    --primary-color-pre: rgb(212, 212, 212);
 }
   
 /* Reset */

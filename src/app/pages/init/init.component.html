@@ -6,11 +6,13 @@
     </p>
     <div class="contaner-buttons">
         <button 
+        [ngClass]="{activate: activateStylesButton}"
         type="button"
         (mouseenter)="onHover(true, 'button')" 
         (mouseleave)="onHover(false, 'button')"
         >Descargar CV</button>
         <a
+        [ngClass]="{activate: activateStylesLink}"
         (mouseenter)="onHover(true, 'link')" 
         (mouseleave)="onHover(false, 'link')" 
         routerLink="/contact" 
@@ -27,6 +29,16 @@
         </div>
     </div>
 </section>
-<section class="container-img">
-    <img src="/images/bg-img.jpg" alt="Hero Image">
+<section class="container-habilities">
+    <div class="container-tecnologies">
+        @for (tecnology of listTecnologies; track $index) {
+            <app-svg-tecnology [data]="tecnology" />  
+        }
+    </div>
+    <div class="container-pre">
+        <div class="container-circles">
+            <span class="circle">●</span> <span class="circle">●</span> <span class="circle">●</span>
+        </div>
+        <app-code-python />
+    </div>
 </section>
