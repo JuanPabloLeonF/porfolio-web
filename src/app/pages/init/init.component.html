@@ -5,15 +5,25 @@
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi cumque quae, numquam expedita distinctio nihil voluptate impedit soluta doloribus facilis a odio vero optio aliquid neque eveniet iure quasi quidem.
     </p>
     <div class="contaner-buttons">
-        <button type="button">Descargar CV</button>
-        <a routerLink="/contact" routerLinkActive="active" rel="noopener noreferrer">Contactame</a>
+        <button 
+        type="button"
+        (mouseenter)="onHover(true, 'button')" 
+        (mouseleave)="onHover(false, 'button')"
+        >Descargar CV</button>
+        <a
+        (mouseenter)="onHover(true, 'link')" 
+        (mouseleave)="onHover(false, 'link')" 
+        routerLink="/contact" 
+        routerLinkActive="active" 
+        rel="noopener noreferrer"
+        >Contactame</a>
     </div>
     <div class="container-social">
         <div class="container-img-social">
-            <img src="/images/linkedin.svg" alt="LinkedIn">
+            <app-linkedin-svg />
         </div>
         <div class="container-img-social">
-            <img src="/images/github.svg" alt="GitHub">
+            <app-github-svg />
         </div>
     </div>
 </section>

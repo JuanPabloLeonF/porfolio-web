@@ -56,11 +56,17 @@
     border: 2px solid var(--secondary-color);
     border-radius: 0.5rem;
     padding: 0.5rem;
+    transition: all 0.8s ease-in-out;
+    background: linear-gradient(to right, var(--color-social-primary) 0%, var(--color-social-primary) 0%);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: left;
 }
 
 .container-description .contaner-buttons button:hover {
     background-color: transparent;
     color: var(--secondary-color);
+    background-size: 0% 100%;
 }
 
 .container-description .contaner-buttons a {
@@ -75,16 +81,24 @@
     font-size: clamp(0.8rem, 1.5vw, 1rem);
     font-weight: bold;
     cursor: pointer;
-    transition: all 0.5s ease;
     border-radius: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.8s ease-in-out;
+
+    background: radial-gradient(circle, 
+        var(--color-social-primary) 0%, 
+        var(--color-social-primary) 100%);
+    
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+    background-position: right;
 }
 
 .container-description .contaner-buttons a:hover {
-    background-color: var(--secondary-color);
-    color: var(--black-color);
+    color: var(--primary-color);
+    background-size: 100% 100%;
 }
 
 .container-social {
@@ -100,32 +114,22 @@
     height: 3rem;
     cursor: pointer;
     border-radius: 100%;
-    border: 2px solid var(--text-color);
+    border: 2px solid var(--color-social-primary);
     padding: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(to top, var(--color-social-primary) 0%, var(--color-social-primary) 100%);
+    background-size: 100% 0%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    transition: background-size 0.5s ease-in-out;
 }
 
 .container-social .container-img-social:hover {
-    background-color: var(--text-color);
+    background-size: 100% 100%;
 }
 
-.container-social .container-img-social img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.container-social .container-img-social:hover img {
-    
-}
-
-.container-social .container-img-social:nth-child(1) img {
-    width: 70%;
-    height: auto;
-    object-fit: cover;
-}
 
 .container-img {
     background-color: transparent;

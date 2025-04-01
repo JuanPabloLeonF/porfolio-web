@@ -39,6 +39,8 @@
     --structure-color-1: rgb(39, 194, 255);
     --structure-color-2: rgb(255, 255, 255);
     --strong-color: rgb(39, 194, 255);
+    --color-social-primary: rgb(39, 194, 255);
+    --color-social-secondary: rgb(255, 255, 255);
 }
 
 /* Theme Light */
@@ -52,6 +54,8 @@
     --alpha-color: rgba(255, 255, 255, 0.5);
     --structure-color-1: rgb(0, 0, 0);
     --structure-color-2: rgb(89, 90, 90);
+    --color-social-primary: rgb(0, 0, 0);
+    --color-social-secondary: rgb(255, 255, 255);
 }
   
 /* Reset */
