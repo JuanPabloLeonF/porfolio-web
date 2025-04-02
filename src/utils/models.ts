@@ -6,38 +6,78 @@ export interface TypeTecnology {
 
 export const tecnologies: TypeTecnology[] = [
     {
+        name: 'Python',
+        color: '#FFD700',
+        urlImg: '/images/python.svg'
+    },
+    {
         name: 'HTML',
         color: '#E34F16',
-        urlImg: 'https://cdn-icons-png.flaticon.com/512/1748/1748078.png'
+        urlImg: '/images/html.svg'
     },
     {
         name: 'CSS',
         color: '#563D7C',
-        urlImg: 'https://cdn-icons-png.flaticon.com/512/1748/1748078.png'
+        urlImg: '/images/css.svg'
     },
     {
         name: 'JavaScript',
         color: '#F7DF1E',
-        urlImg: 'https://cdn-icons-png.flaticon.com/512/1748/1748078.png'
+        urlImg: '/images/javascript.svg'
     },
     {
         name: 'Angular',
         color: '#E05600',
-        urlImg: 'https://cdn-icons-png.flaticon.com/512/1748/1748078.png'
+        urlImg: '/images/angular.svg'
     },
     {
         name: 'React',
         color: '#61DA96',
-        urlImg: 'https://cdn-icons-png.flaticon.com/512/1748/1748078.png'
-    },
-    {
-        name: 'Python',
-        color: '#FFD700',
-        urlImg: 'https://cdn-icons-png.flaticon.com/512/1748/1748078.png'
+        urlImg: '/images/react.svg'
     },
     {
         name: 'Typescript',
-        color: 'blue',
-        urlImg: 'https://cdn-icons-png.flaticon.com/512/1748/1748078.png'
+        color: '#007ACC',
+        urlImg: '/images/typescript.svg'
+    },
+    {
+        name: 'Flask',
+        color: '#000000',
+        urlImg: '/images/flask.svg'
+    },
+    {
+        name: 'Docker',
+        color: '#2496ED',
+        urlImg: '/images/docker.svg'
+    },
+    {
+        name: 'Git',
+        color: '#F05032',
+        urlImg: '/images/git.svg'
+    },
+    {
+        name: 'GitHub',
+        color: '#181717',
+        urlImg: '/images/github-svg.svg'
+    },
+    {
+        name: 'MySQL',
+        color: '#4479A1',
+        urlImg: '/images/mysql.svg'
+    },
+    {
+        name: 'MongoDB',
+        color: '#47A248',
+        urlImg: '/images/mongo.svg'
+    },
+    {
+        name: 'PostgreSQL',
+        color: '#336791',
+        urlImg: '/images/postgresql.svg'
+    },
+    {
+        name: 'Kubernetes',
+        color: '#326CE5',
+        urlImg: '/images/kubernetes.svg'
     }
 ]

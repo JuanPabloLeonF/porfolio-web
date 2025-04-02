@@ -32,13 +32,39 @@
 <section class="container-habilities">
     <div class="container-tecnologies">
         @for (tecnology of listTecnologies; track $index) {
-            <app-svg-tecnology [data]="tecnology" />  
+            <app-svg-tecnology  
+            [data]="tecnology" 
+            [dataSelected]="selectedTecnology === tecnology" 
+            (dataSelectedOutput)="selectTecnologyFuntion($event)" 
+            /> 
         }
     </div>
     <div class="container-pre">
         <div class="container-circles">
             <span class="circle">●</span> <span class="circle">●</span> <span class="circle">●</span>
         </div>
-        <app-code-python />
+        @switch (selectedTecnology.name) {
+            @case ("Python") {
+                <app-code-python />
+            }
+            @case ("HTML") {
+                <app-code-html />
+            }
+            @case ("CSS") {
+                <app-code-css />
+            }
+            @case ("Typescript") {
+                <app-code-typescript />
+            }
+            @case ("JavaScript") {
+                <app-code-javascript />
+            }
+            @case ("Angular") {
+                <app-code-angular />
+            }
+            @case ("React") {
+                <app-code-react />
+            }
+        }
     </div>
 </section>
