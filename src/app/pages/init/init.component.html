@@ -30,7 +30,13 @@
     </div>
 </section>
 <section class="container-habilities">
-    <div class="container-tecnologies">
+    <div 
+    class="container-tecnologies" 
+    [ngStyle]="{
+        borderLeft: '7px solid ' + selectedTecnology.color,
+        boxShadow: '3px 1px 11px 0px' + selectedTecnology.color,
+        }"
+    >
         @for (tecnology of listTecnologies; track $index) {
             <app-svg-tecnology  
             [data]="tecnology" 
@@ -39,7 +45,13 @@
             /> 
         }
     </div>
-    <div class="container-pre">
+    <div 
+    class="container-pre" 
+    [ngStyle]="{
+        borderLeft: '7px solid ' + selectedTecnology.color,
+        boxShadow: '3px 1px 11px 0px' + selectedTecnology.color,
+        }"
+    >
         <div class="container-circles">
             <span class="circle">●</span> <span class="circle">●</span> <span class="circle">●</span>
         </div>
@@ -64,6 +76,30 @@
             }
             @case ("React") {
                 <app-code-react />
+            }
+            @case ("Docker") {
+                <app-code-docker />
+            }
+            @case ("Kubernetes") {
+                <app-code-kubernetes />
+            }
+            @case ("Git") {
+                <app-code-git />
+            }
+            @case ("Flask") {
+                <app-code-flask />
+            }
+            @case ("MongoDB") {
+                <app-code-mongo-db />
+            }
+            @case ("GitHub") {
+                <app-code-git-hub />
+            }
+            @case ("Postgresql") {
+                <app-code-postgresql />
+            }
+            @case ("MySQL") {
+                <app-code-mysql />
             }
         }
     </div>

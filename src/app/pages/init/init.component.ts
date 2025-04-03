@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { LinkedinSvgComponent } from "../../components/icons/linkedin-svg/linkedin-svg.component";
 import { GithubSvgComponent } from "../../components/icons/github-svg/github-svg.component";
-import { NgClass } from '@angular/common';
+import { NgClass, NgStyle } from '@angular/common';
 import { tecnologies, TypeTecnology } from '../../../utils/models';
 import { CodePythonComponent } from '../../components/code/code-python/code-python.component';
 import { SvgTecnologyComponent } from '../../components/svg-tecnology/svg-tecnology.component';
@@ -12,15 +12,23 @@ import { CodeJavascriptComponent } from "../../components/code/code-javascript/c
 import { CodeAngularComponent } from "../../components/code/code-angular/code-angular.component";
 import { CodeReactComponent } from "../../components/code/code-react/code-react.component";
 import { CodeTypescriptComponent } from "../../components/code/code-typescript/code-typescript.component";
+import { CodeMongoDbComponent } from "../../components/code/code-mongo-db/code-mongo-db.component";
+import { CodeGitHubComponent } from "../../components/code/code-git-hub/code-git-hub.component";
+import { CodeFlaskComponent } from "../../components/code/code-flask/code-flask.component";
+import { CodeGitComponent } from "../../components/code/code-git/code-git.component";
+import { CodeKubernetesComponent } from "../../components/code/code-kubernetes/code-kubernetes.component";
+import { CodeDockerComponent } from "../../components/code/code-docker/code-docker.component";
+import { CodePostgresqlComponent } from "../../components/code/code-postgresql/code-postgresql.component";
+import { CodeMysqlComponent } from "../../components/code/code-mysql/code-mysql.component";
 
 @Component({
-  selector: 'app-init',
   imports: [
     RouterLink,
     RouterLinkActive,
     LinkedinSvgComponent,
     GithubSvgComponent,
     NgClass,
+    NgStyle,
     CodePythonComponent,
     SvgTecnologyComponent,
     CodeHTMLComponent,
@@ -28,8 +36,16 @@ import { CodeTypescriptComponent } from "../../components/code/code-typescript/c
     CodeJavascriptComponent,
     CodeAngularComponent,
     CodeReactComponent,
-    CodeTypescriptComponent
-],
+    CodeTypescriptComponent,
+    CodeMongoDbComponent,
+    CodeGitHubComponent,
+    CodeFlaskComponent,
+    CodeGitComponent,
+    CodeKubernetesComponent,
+    CodeDockerComponent,
+    CodePostgresqlComponent,
+    CodeMysqlComponent
+  ],
   templateUrl: './init.component.html',
   styleUrl: './init.component.css'
 })

@@ -71,7 +71,7 @@ export const tecnologies: TypeTecnology[] = [
         urlImg: '/images/mongo.svg'
     },
     {
-        name: 'PostgreSQL',
+        name: 'Postgresql',
         color: '#336791',
         urlImg: '/images/postgresql.svg'
     },

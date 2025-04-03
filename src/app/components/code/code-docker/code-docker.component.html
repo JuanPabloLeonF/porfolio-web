@@ -1,0 +1,13 @@
+<div class="terminal">
+<pre>
+<code>
+    
+  <span class="keyword">FROM</span> <span class="string">python:3.13.2</span>
+  <span class="keyword">WORKDIR</span> <span class="string">/microservice-user</span>
+  <span class="keyword">COPY</span> <span class="string">requirements.txt .</span>
+  <span class="keyword">RUN</span> <span class="string">pip install -r requirements.txt</span>
+  <span class="keyword">COPY</span> <span class="string">app/ app/</span>
+  <span class="keyword">CMD</span> <span class="symbol">[</span><span class="string">"python"</span><span class="symbol">,</span> <span class="string">"main.py"</span><span class="symbol">]</span>
+</code>
+</pre>
+</div>

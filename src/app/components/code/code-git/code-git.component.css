@@ -1,11 +1,8 @@
-:host {
-    display: contents;
-}
-
 .terminal {
     background-color: rgb(12, 12, 12);
+    color: rgb(255, 255, 255);
     font-family: "Courier New", monospace;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 183, 255, 0.3);
     max-width: 600px;
@@ -13,7 +10,7 @@
 }
 
 code {
-    color: rgb(237, 125, 252);
+    color: rgb(255, 255, 255);
     font-weight: 500;
     display: block;
     white-space: pre-wrap;
@@ -31,18 +28,13 @@ code {
 .string {
     color: rgb(176, 255, 102);
 }
-
+    
 .prompt {
     color: rgb(255, 94, 94);
     font-weight: bold;
 }
 
-.comment {
-    color: rgb(120, 120, 120);
-    font-style: italic;
-}
-
-.link {
-    color: rgb(94, 176, 255);
-    text-decoration: underline;
+.output {
+    color: rgb(204, 204, 204);
+    margin-left: 20px;
 }
