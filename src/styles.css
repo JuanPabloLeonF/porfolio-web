@@ -27,14 +27,17 @@
     --breakpoint-desktop: 1024px;
 */    
 
-/* Theme Dark Defaulth */
+/* Theme Dark Defaulth
+--primary-color: rgb(4, 32, 48);
+--box-shadown-color: rgba(0, 183, 255, 0.116);
+*/
 :root {
-    --primary-color: rgb(4, 32, 48);
+    --primary-color: rgb(0, 0, 0);
     --secondary-color: rgb(39, 194, 255);
     --white-color: rgb(255, 255, 255);
     --black-color: rgb(0, 0, 0);
     --text-color: rgb(255, 255, 255);
-    --box-shadown-color: rgba(0, 183, 255, 0.116);
+    --box-shadown-color: rgba(39, 194, 255, 0.233);
     --alpha-color: rgba(0, 0, 0, 0.5);
     --structure-color-1: rgb(39, 194, 255);
     --structure-color-2: rgb(255, 255, 255);
@@ -43,6 +46,7 @@
     --color-social-secondary: rgb(255, 255, 255);
     --primary-color-alpha: rgba(4, 32, 48, 0.356);
     --primary-color-pre: rgb(4, 32, 48);
+    --blur-bg: blur(5px);
 }
 
 /* Theme Light */
@@ -53,7 +57,7 @@
     --black-color: rgb(0, 0, 0);
     --text-color: rgb(0, 0, 0);
     --box-shadown-color: rgba(0, 0, 0, 0.116);
-    --alpha-color: rgba(255, 255, 255, 0.5);
+    --alpha-color: rgba(212, 212, 212, 0.5);
     --structure-color-1: rgb(0, 0, 0);
     --structure-color-2: rgb(89, 90, 90);
     --color-social-primary: rgb(0, 0, 0);
@@ -87,11 +91,15 @@ body {
     color: var(--text-color);
     position: relative;
     background-color: var(--primary-color);
-    color: var(--text-color);
-    max-width: var(--max-width);
-    height: 100vh; 
-    margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/images/bg-hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
+
   
 a {
     color: var(--secondary-color);

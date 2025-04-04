@@ -12,7 +12,6 @@ import { NgStyle } from '@angular/common';
     (mouseout)="onHoverItem(false)"
     [ngStyle]="{
         'box-shadow': dataSelected() || activateStylesHover ? '0px 0px 8px 1px ' + data().color : 'none',
-        'border': true ? '2px solid ' + data().color : '2px solid ' + data().color
       }"
     >
       <img [src]="data().urlImg" [alt]="data().name">

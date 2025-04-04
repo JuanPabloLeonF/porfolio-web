@@ -8,8 +8,9 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 1rem;
-    background: transparent;
-    z-index: 4;
+    z-index: 5;
+    background-color: var(--alpha-color);
+    backdrop-filter: var(--blur-bg);
 }
 
 header .logo {
@@ -83,10 +84,11 @@ header nav a.active::after {
     justify-content: center;
     align-items: center;
     padding: 0.5rem;
-    background-color: var(--primary-color);
-    box-shadow: 0px 0px 8px 1px var(--secondary-color);
     font-size: 1rem;
+    font-weight: bold;
     z-index: 4;
+    background-color: var(--alpha-color);
+    backdrop-filter: var(--blur-bg);
 }
 
 .container-mod-theme  .container-themes.activate {
@@ -159,10 +161,6 @@ header .nav-responsive {
 }
 
 @media screen and (width < 768px) {
-
-    header {
-        position: relative;
-    }
 
     header .nav-max {
         display: none;
