@@ -20,7 +20,7 @@ main {
     height: 100%;
     background-color: var(--alpha-color);
     backdrop-filter: var(--blur-bg);
-    clip-path: polygon(100% 100%, 50% 100%, 0 100%, 0 70%, 50% 100%, 100% 70%);
+    clip-path: polygon(100% 100%, 50% 100%, 0 100%, 0 75%, 50% 100%, 100% 75%);
     z-index: -1;
 }
 

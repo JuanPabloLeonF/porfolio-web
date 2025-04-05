@@ -1,0 +1,56 @@
+:host {
+    display: contents;
+}
+
+.container-projects {
+    background-color: white;
+    margin-top: 15rem;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    align-items: stretch;
+    gap: 1rem;
+}
+
+.section-tecnologies {
+    width: 30%;
+    height: auto;
+    background-color: rgb(255, 251, 0);
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.section-tecnologies > h2 {
+    font-family: var(--font-family-cleanow);
+}
+
+.section-tecnologies .container-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(4rem, 1fr));
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+}
+
+.section-projects {
+    background-color: blue;
+    width: 70%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 0.5rem;
+}
+
+.section-projects .item {
+    width: 100%;
+    height: 350px;
+    background-color: black;
+    cursor: pointer;
+}
