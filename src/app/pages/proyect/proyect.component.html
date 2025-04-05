@@ -3,22 +3,39 @@
         <h2>TECNOLOGIAS</h2>
         <div class="container-items">
             @for (tecnology of tecnologiesList; track $index) {
-                <app-svg-tecnology [data]="tecnology" />
+                <app-svg-tecnology 
+                [data]="tecnology" 
+                (click)="onGetTecnologySelected(tecnology)" 
+                [dataSelected]="tecnologySelected == tecnology"
+                (dataSelectedOutput)="tecnologySelectedOutputfuntion($event)"
+                />
             }
         </div>
     </section>
     <section class="section-projects">
-        @for (project of [1,2,3]; track $index) {
-            <div class="item">
+        @for (project of projectsList; track $index) {
+            <div 
+            class="item"
+            [ngStyle]="{
+                'border': isProjectFiltered(project) ? '1px solid ' + tecnologySelected.color : '1px solid white'
+            }"
+            >
                 <div class="container-img">
-                    <img src="/" alt="project.title">
+                    <img src="{{ project.urlImg }}" alt="{{ project.title }}">
                 </div>
-                <h3>{{ "project.title" }}</h3>
-                <p>{{ "project.description" }}</p>
-                <div class="list-tecnologies">
-                    <div class="img-tecnology">
-                        <img src="/" alt="project.title">
-                    </div>
+                <h3>{{ project.title }}</h3>
+                <p>{{ project.description }}</p>
+                <div 
+                class="list-tecnologies"
+                [ngStyle]="{
+                    'border-top': isProjectFiltered(project) ? '1px solid ' + tecnologySelected.color : '1px solid white'
+                }"
+                >
+                    @for (tecnology of project.tecnologiesList; track $index) {
+                        <div class="img-tecnology">
+                            <img src="{{ tecnology.urlImg }}" alt="{{ project.title }}">
+                        </div>
+                    }
                 </div>
             </div>
         }

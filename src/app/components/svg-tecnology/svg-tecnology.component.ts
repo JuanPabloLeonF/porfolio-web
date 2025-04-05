@@ -1,5 +1,5 @@
 import { Component, input, output } from '@angular/core';
-import { TypeTecnology } from '../../../utils/models';
+import { TypeTecnology } from '../../../utils/models/tecnology';
 import { NgStyle } from '@angular/common';
 
 @Component({
@@ -12,6 +12,7 @@ import { NgStyle } from '@angular/common';
     (mouseout)="onHoverItem(false)"
     [ngStyle]="{
         'box-shadow': dataSelected() || activateStylesHover ? '0px 0px 8px 1px ' + data().color : 'none',
+        'border': true ? '1px solid ' + data().color : 'none'
       }"
     >
       <img [src]="data().urlImg" [alt]="data().name">

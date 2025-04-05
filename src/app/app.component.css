@@ -6,9 +6,7 @@ main {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 0 1rem;
-    margin: 0 auto;
-    z-index: 1;
+    z-index: 0;
     position: relative;
 }
 
@@ -22,6 +20,7 @@ main {
     backdrop-filter: var(--blur-bg);
     clip-path: polygon(100% 100%, 50% 100%, 0 100%, 0 75%, 50% 100%, 100% 75%);
     z-index: -1;
+    display: none;
 }
 
 
@@ -72,6 +71,5 @@ main {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 1rem;
     }
 }
