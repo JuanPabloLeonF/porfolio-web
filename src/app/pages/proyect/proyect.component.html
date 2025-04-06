@@ -1,9 +1,11 @@
-<section class="container-projects">
+<section class="container-projects" #containerProjects>
+    <canvas #canvas class="connection-canvas"></canvas>
     <section class="section-tecnologies">
         <h2>TECNOLOGIAS</h2>
         <div class="container-items">
             @for (tecnology of tecnologiesList; track $index) {
                 <app-svg-tecnology 
+                #appSvgTecnology
                 [data]="tecnology" 
                 (click)="onGetTecnologySelected(tecnology)" 
                 [dataSelected]="tecnologySelected == tecnology"
@@ -15,9 +17,11 @@
     <section class="section-projects">
         @for (project of projectsList; track $index) {
             <div 
+            #item
             class="item"
             [ngStyle]="{
-                'border': isProjectFiltered(project) ? '1px solid ' + tecnologySelected.color : '1px solid white'
+                'border': isProjectFiltered(project) ? '1px solid ' + tecnologySelected.color : '1px solid white',
+                'box-shadow': isProjectFiltered(project) ? '0px 0px 8px 1px ' + tecnologySelected.color : 'none'
             }"
             >
                 <div class="container-img">
@@ -28,7 +32,8 @@
                 <div 
                 class="list-tecnologies"
                 [ngStyle]="{
-                    'border-top': isProjectFiltered(project) ? '1px solid ' + tecnologySelected.color : '1px solid white'
+                    'border-top': isProjectFiltered(project) ? '1px solid ' + tecnologySelected.color : '1px solid white',
+                    'box-shadow': isProjectFiltered(project) ? '0px 0px 2px 1px ' + tecnologySelected.color : 'none'
                 }"
                 >
                     @for (tecnology of project.tecnologiesList; track $index) {

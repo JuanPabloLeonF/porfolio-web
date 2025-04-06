@@ -42,7 +42,7 @@ export const tecnologies: TypeTecnology[] = [
     },
     {
         name: 'Flask',
-        color: '#000000',
+        color: '#19610a',
         urlImg: '/images/flask.svg'
     },
     {

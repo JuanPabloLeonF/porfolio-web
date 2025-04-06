@@ -65,9 +65,9 @@ export const listProjects: TypeProject[] = [
         ]
     },
     {
-        title: "Proyecto de microservicios",
-        description: "Proyecto de microservicios bastante importante para el desarrollo de la aplicacion",
-        urlImg: "/images/bg-hero3.jpg",
+        title: "Proyecto de restaurante",
+        description: "Proyecto de restaurante bastante importante para el desarrollo de la aplicacion",
+        urlImg: "/images/bg-hero.jpg",
         urlRepositoryGit: "#",
         tecnologiesList: [
             {
@@ -79,13 +79,10 @@ export const listProjects: TypeProject[] = [
                 name: "flask"
             },
             {
-                urlImg: "/images/docker.svg",
-                name: "docker"
-            },
-            {
                 urlImg: "/images/mysql.svg",
                 name: "mysql"
             },
         ]
     },
+    
 ]

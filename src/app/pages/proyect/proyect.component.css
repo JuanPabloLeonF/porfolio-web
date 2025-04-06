@@ -9,15 +9,26 @@
     width: 90%;   
     height: auto;
     display: grid;
-    grid-template-columns: 30% 70%;
-    grid-template-rows: min-content 1fr;
+    grid-template-rows: 40% fit-content;
     gap: 1rem;
     padding: 1rem;
+    position: relative;
+}
+
+.container-projects canvas {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
 }
 
 .container-projects .section-tecnologies {
     width: 100%;
-    height: fit-content;
+    height: 100%;
     background-color: transparent;
     display: flex;
     flex-direction: column;
@@ -31,8 +42,10 @@
 }
 
 .section-tecnologies .container-items {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(4rem, 1fr));
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     gap: 1rem;
     width: 100%;
     height: 100%;
@@ -41,25 +54,30 @@
 .section-projects {
     background-color: transparent;
     width: 100%;
-    height: auto;
+    height: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1rem;
     padding: 0.5rem;
-    overflow-y: auto;
     min-height: 300px;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
 }
 
 .section-projects .item {
     width: 100%;
     height: 350px;
-    background-color: transparent;
+    background-color: var(--alpha-color);
+    backdrop-filter: blur(20px);
     cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: stretch;
     align-items: stretch;
     transition: border 0.5s ease;
+    position: relative;
 }
 
 .section-projects .item .container-img {
