@@ -1,0 +1,13 @@
+<section class="section-tecnologies">
+    <h2>TECNOLOGIAS</h2>
+    <div class="container-items">
+        @for (tecnology of tecnologiesList; track $index) {
+            <app-svg-tecnology 
+            #appSvgTecnology
+            [data]="tecnology" 
+            [dataSelected]="tecnologySelected == tecnology"
+            (dataSelectedOutput)="tecnologySelectedOutputfuntion($event)"
+            />
+        }
+    </div>
+</section>

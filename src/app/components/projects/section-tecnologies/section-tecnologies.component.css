@@ -1,0 +1,24 @@
+.section-tecnologies {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.section-tecnologies > h2 {
+    font-family: var(--font-family-cleanow);
+}
+
+.section-tecnologies .container-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+}
