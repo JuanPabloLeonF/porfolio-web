@@ -14,7 +14,7 @@ export interface TypeProject {
 export const listProjects: TypeProject[] = [
     {
         title: "Proyecto de microservicios",
-        description: "Proyecto de microservicios bastante importante para el desarrollo de la aplicacion",
+        description: "Proyecto de microservicios bastante importante para el desarrollo de la aplicacion Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, magnam suscipit perspiciatis inventore illo neque! Aliquam illo nostrum similique unde laudantium dolores eius, quo neque consequatur voluptas quisquam a at! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, magnam suscipit perspiciatis inventore illo neque! Aliquam illo nostrum similique unde laudantium dolores eius, quo neque consequatur voluptas quisquam a at!  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, magnam suscipit perspiciatis inventore illo neque! Aliquam illo nostrum similique unde laudantium dolores eius, quo neque consequatur voluptas quisquam a at!",
         urlImg: "/images/bg-hero3.jpg",
         urlRepositoryGit: "#",
         tecnologiesList: [

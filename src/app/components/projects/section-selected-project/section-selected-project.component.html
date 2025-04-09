@@ -1,1 +1,25 @@
-<p>section-selected-project works!</p>
+<div class="container-selected-project">
+    <div class="container-img">
+        <img src="{{ projectSelected().urlImg }}" alt="{{projectSelected().title}}">
+    </div>
+    <div class="container-information">
+        <h2>{{ projectSelected().title }}</h2>
+        <p>{{ projectSelected().description }}</p>
+        <div class="container-list-tecnologies">
+            @for (tecnology of projectSelected().tecnologiesList; track $index) {
+                <div class="container-tecnology">
+                    <p>{{ tecnology.name }}</p>
+                </div>
+            }
+        </div>
+        <div class="container-red">
+            <div>
+                <app-demo-svg [inputUrl]="projectSelected().urlRepositoryGit" />
+
+            </div>
+            <div>
+                <app-github-svg [inputUrl]="projectSelected().urlRepositoryGit" />
+            </div>
+        </div>
+    </div>
+</div>

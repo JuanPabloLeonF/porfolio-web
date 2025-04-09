@@ -25,3 +25,13 @@
     z-index: -1;
     pointer-events: none;
 }
+
+.container-selected-project {
+    background-color: var(--alpha-color);
+    backdrop-filter: blur(15px);
+    width: 90%;   
+    height: 35rem;
+    padding: 1rem;
+    z-index: 1;
+    margin: 3rem 0;
+}

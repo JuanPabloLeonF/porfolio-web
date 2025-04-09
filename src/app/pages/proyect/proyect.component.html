@@ -1,5 +1,8 @@
 <section class="container-projects" #containerProjects>
     <canvas #canvas class="connection-canvas"></canvas>
     <app-section-tecnologies (ouputDataSelected)="onHandlerClickSectionTecnologies($event)" />
-    <app-section-projects [tecnologySelected]="tecnologySelected" [filteredProjects]="filteredProjects" />
+    <app-section-projects (projectSelectedOutput)="onProjectSelected($event)" [tecnologySelected]="tecnologySelected" [filteredProjects]="filteredProjects" />
+</section>
+<section id="container-selected-project" class="container-selected-project">
+    <app-section-selected-project [projectSelected]="projectSelected" />
 </section>

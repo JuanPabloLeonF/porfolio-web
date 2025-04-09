@@ -1,12 +1,12 @@
 import { Component, input } from '@angular/core';
 
 @Component({
-  selector: 'app-github-svg',
+  selector: 'app-demo-svg',
   imports: [],
-  templateUrl: './github-svg.component.html',
-  styleUrl: './github-svg.component.css'
+  templateUrl: './demo-svg.component.html',
+  styleUrl: './demo-svg.component.css'
 })
-export class GithubSvgComponent {
+export class DemoSvgComponent {
 
   public inputUrl = input<string>("https://github.com/JuanPabloLeonF");
 }

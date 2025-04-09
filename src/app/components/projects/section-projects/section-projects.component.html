@@ -1,6 +1,8 @@
 <section class="section-projects">
     @for (project of projectsList; track $index) {
         <div 
+        (click)="onScrollToTarget($event)"
+        (click)="onProjectSelected(project)"
         #item
         class="item"
         [ngStyle]="{

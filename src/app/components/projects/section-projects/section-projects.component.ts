@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { TypeProject, listProjects } from '../../../../utils/models/project';
 import { NgStyle } from '@angular/common';
 import { TypeTecnology } from '../../../../utils/models/tecnology';
@@ -13,9 +13,23 @@ export class SectionProjectsComponent {
 
   public tecnologySelected = input<TypeTecnology>({} as TypeTecnology);
   public filteredProjects = input<TypeProject[]>([]);
+  public projectSelectedOutput = output<TypeProject>();
   protected projectsList: TypeProject[] = listProjects;
+
+  protected onProjectSelected(project: TypeProject): void {
+    this.projectSelectedOutput.emit(project);
+  }
 
   protected isProjectFiltered(project: TypeProject): boolean {
       return this.filteredProjects().includes(project);
   }
+
+  protected onScrollToTarget(event: Event): void {
+    event.preventDefault();
+    const target = document.getElementById('container-selected-project');
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+  
 }
