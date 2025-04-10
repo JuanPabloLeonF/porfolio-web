@@ -27,8 +27,15 @@ export class SectionProjectsComponent {
   protected onScrollToTarget(event: Event): void {
     event.preventDefault();
     const target = document.getElementById('container-selected-project');
+    const offset = 25;
+  
     if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
+      const top = target.getBoundingClientRect().top + globalThis.pageYOffset - offset;
+  
+      globalThis.scrollTo({
+        top,
+        behavior: 'smooth'
+      });
     }
   }
   

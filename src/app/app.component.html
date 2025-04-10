@@ -1,6 +1,6 @@
 <app-header />
-<main>
-  <router-outlet />
+<main [@routeAnimations]="prepareRoute(outlet)">
+  <router-outlet #outlet="outlet" />
 </main>
 <div class="estructure-1"></div>
 <div class="estructure-2"></div>

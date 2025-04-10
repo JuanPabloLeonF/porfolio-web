@@ -36,6 +36,7 @@
     --secondary-color: rgb(39, 194, 255);
     --white-color: rgb(255, 255, 255);
     --black-color: rgb(0, 0, 0);
+    --static-color: rgb(18, 18, 18);
     --text-color: rgb(255, 255, 255);
     --box-shadown-color: rgba(39, 194, 255, 0.233);
     --alpha-color: rgba(0, 0, 0, 0.5);
@@ -64,6 +65,7 @@
     --color-social-secondary: rgb(255, 255, 255);
     --primary-color-alpha: rgba(212, 212, 212, 0.5);
     --primary-color-pre: rgb(212, 212, 212);
+    --static-color: rgb(212, 212, 212);
 }
 
 ::-webkit-scrollbar {

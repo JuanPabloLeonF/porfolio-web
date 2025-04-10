@@ -4,7 +4,7 @@
 
 .container-selected-project {
     width: 90%;
-    height: 100%;
+    height: 31rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -38,7 +38,7 @@
     width: 100%;
     height: 10%;
     font-family: var(--font-family-cleanow);
-    font-size: clamp(2.5rem, 1.5vw, 3rem);
+    font-size: clamp(1.8rem, 1.5vw, 2.5rem);
     font-weight: bold;
     color: var(--secondary-color);
 }
@@ -48,7 +48,9 @@
     height: 60%;
     font-size: clamp(0.7rem, 1.5vw, 1rem);
     border-bottom: 1px solid var(--secondary-color);
-    line-height: 1.5;
+    line-height: 1.2;
+    color: var(--text-color);
+    padding-top: 1rem;
 }
 
 .container-selected-project .container-information .container-list-tecnologies {
@@ -60,6 +62,7 @@
     align-items: start;
     gap: 1.5rem;
     padding-top: 0.5rem;
+    flex-wrap: wrap;
 }
 
 .container-selected-project .container-information .container-list-tecnologies .container-tecnology {
@@ -91,6 +94,7 @@
     justify-content: start;
     align-items: center;
     gap: 1rem;
+    margin-top: 0.5rem;
 }
 
 .container-selected-project .container-information .container-red > div {
@@ -113,4 +117,41 @@
 
 .container-selected-project .container-information .container-red > div:hover {
     background-size: 100% 100%;
+}
+
+@media screen and (width < 768px) {
+    .container-selected-project  {
+        width: 100vw;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container-selected-project .container-img {
+        width: 100%;
+        height: 15rem;
+    }
+    .container-selected-project .container-information {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .container-selected-project .container-information > p {
+        padding:0;
+        margin:0;
+        padding-bottom: 0.5rem;
+    }
+
+    .container-selected-project .container-information .container-list-tecnologies {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+    }
 }

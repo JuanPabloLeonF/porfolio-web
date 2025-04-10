@@ -1,9 +1,9 @@
 :host {
-    display: flex;
+    display: contents;
 }
 
 header {
-    width: 100%;
+    width: 100vw;
     height: var(--header-height);
     display: flex;
     justify-content: space-between;
@@ -12,6 +12,9 @@ header {
     z-index: 10;
     background-color: var(--alpha-color);
     backdrop-filter: var(--blur-bg);
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 header .logo {
