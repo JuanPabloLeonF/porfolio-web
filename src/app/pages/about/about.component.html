@@ -1,1 +1,70 @@
-<p>about works!</p>
+<section class="about">
+    <div class="container-about-main">
+        <div class="container-img-about">
+            <img src="/images/img-perfil.jpg" alt="Foto de perfil">
+        </div>
+        <div class="contaner-title-about">
+            <div class="container-title">
+                <h2>Juan Pablo Leon</h2>
+                <p>Desarrollador de sistemas web, usando tecnologias para el backend & frontend</p>
+            </div>
+            <div class="container-buttons">
+                <button 
+                type="button"
+                [ngClass]="{activate: activateStylesButton}"
+                (mouseenter)="onHover(true, 'button')" 
+                (mouseleave)="onHover(false, 'button')" 
+                (click)="onScrollToTarget($event)"
+                >
+                    ¿Quien soy?
+                </button>
+                <a
+                [ngClass]="{activate: activateStylesLink}"
+                (mouseenter)="onHover(true, 'link')" 
+                (mouseleave)="onHover(false, 'link')" 
+                routerLink="/contact" 
+                routerLinkActive="active" 
+                rel="noopener noreferrer"
+                >Contactame</a>
+            </div>
+        </div>
+    </div>
+    <div id="container-about-information" class="container-about-information">
+        <div class="container-information">
+            <h2>¿Quien  soy?</h2>
+            <div class="about-me">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates vel libero tempore facilis illo quo? Commodi explicabo consectetur eius adipisci, reiciendis, quidem et in vero nostrum similique quae? Esse, suscipit!
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates vel libero tempore facilis illo quo? Commodi explicabo consectetur eius adipisci, reiciendis, quidem et in vero nostrum similique quae? Esse, suscipit!
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates vel libero tempore facilis illo quo? Commodi explicabo consectetur eius adipisci, reiciendis, quidem et in vero nostrum similique quae? Esse, suscipit!
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates vel libero tempore facilis illo quo? Commodi explicabo consectetur eius adipisci, reiciendis, quidem et in vero nostrum similique quae? Esse, suscipit!
+                </p>
+            </div>
+            <a
+            routerLink="/projects" 
+            routerLinkActive="active" 
+            rel="noopener noreferrer"
+            >Proyectos</a>
+        </div>
+        <div class="container-img-information">
+            <div>
+                <img src="/images/bg-hero.jpg" alt="Foto de perfil">
+            </div>
+            <div>
+                <img src="/images/bg-hero2.jpg" alt="Foto de perfil">
+            </div>
+            <div>
+                <img src="/images/bg-hero3.jpg" alt="Foto de perfil">
+            </div>
+            <div>
+                <img src="/images/img-perfil.jpg" alt="Foto de perfil">
+            </div>
+        </div>
+    </div>
+</section>
