@@ -41,7 +41,7 @@ export class ContactComponent implements OnInit {
             this.formSuccess = true;
             this.formSubmitted = false;
             this.contactForm.reset();
-            alert(`GRACIAS POR PONERTE POR ESCRIBIR ME, TE CONTACTARÉ LO MAS PRONTO POSIBLE ${this.contactForm.value.name}`);
+            alert(`¡Gracias por escribirme!  Te contactaré lo más pronto posible, ${this.contactForm.value.name}. `);
           },
           error: (error) => {
             this.formError = true;
